@@ -1,0 +1,53 @@
+html{
+    background-color: #F5F5F5;
+}
+
+h1{
+    background-color: #383377;
+    color: white;
+    text-align: center;
+    padding:25px 0;
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+}
+
+img{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+li{
+    margin-left: 50px;
+}
+
+.license_items{
+    color: white;
+    background-color: #333333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#bottom_links_block{
+    align-self: center;
+    text-align: center;
+    list-style: none;
+}
+
+#bottom_links_block li{
+    list-style: none;
+    display: inline;
+    padding: 0;
+    margin: 30px 20px 20px 0;
+    background-color: #383377;
+    border-radius: 100%;
+    padding: 10px;
+    font-size: 25px;
+}
+
+#wrapper{
+    margin: 0 10%;
+}
