@@ -1,0 +1,128 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    color: #4f4f4f;
+    background-image: url('https://raw.githubusercontent.com/steminist-ua/dstu/6b2f9c30f3e25c95f9f567fbc05891b2f9cf8eeb/pzs/internet_programming/l3/assects/side_background2.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+main{
+    width: 70%;
+    position: absolute;
+    margin-top: 5vh;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#logo{
+    color: white;
+    text-align: center;
+}
+
+#logo img{
+    height: 70px;
+}
+
+#purchase_data{
+    background-color: #FFFFFF50;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 5vh;
+}
+
+.buy_icon{
+    height: 32px;
+    margin-right: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.product_data{
+    background-color: #FFFFFFAA;
+    border-radius: 20px;
+    padding: 20px 15px;
+    margin-bottom: 32px;
+}
+
+.first_line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.first_line p{
+    font-weight: 900;
+}
+
+.product_name{
+    display: flex;
+    vertical-align: middle;
+}
+
+.product_name p{
+    font-weight: 600;
+}
+
+.second_line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.meta_data{
+    display: flex;
+}
+
+.meta_data{
+    font-weight: 200;
+}
+
+.serial_number{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.price, .payment_title{
+    font-weight: 900;
+}
+
+.comon_payment_string{
+    display: flex;
+    justify-content: space-between;
+}
+
+#total_payment_string{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 900;
+    font-size: 25px;
+    margin-top: 36px;
+}
+
+#previous_page{
+    margin-top: 32px;
+}
+
+#previous_page img{
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 16px;
+}
+
+#previous_page p{
+    display: inline-block;
+    color: black;
+    font-size: 5;
+    
+}
+
+#back_button{
+    text-decoration: none;
+}

@@ -1,0 +1,48 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body{
+    position: relative;
+    text-align: center;
+    background-image: url('https://github.com/steminist-ua/dstu/blob/master/pzs/internet_programming/l3/assects/side_background.png?raw=true');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main{
+    width: 60%;
+    position: absolute;
+    margin-top: 50vh;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main img{
+    height: 35px;
+}
+
+main p{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    color: #4f4f4f;
+}
+
+.sign_button{
+    background-color: white;
+    border-radius: 35px;
+    margin: 40px 0;
+    border: 1px solid #144f4f4f;
+}
+
+.sign_button img{
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+}

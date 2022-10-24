@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment form</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section id="payment_method_check">
+            <a href="#">
+                <button class="button active_button">
+                    Pay with PayPal
+                </button>
+            </a>
+            <a href="#">
+                <button  class="button">
+                    Or Pay with card
+                </button>
+            </a>
+        </section>
+        <section id="email">
+            <p>Email</p>
+            <input type="text">
+        </section>
+        <section id="card_data">
+            <p>Card Data</p>
+            <div id="card_info">
+                <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="1234 1234 1234 1234">
+                <ul id="additing_card_info">
+                    <li><input id="card_year" inputmode="numeric" placeholder="MM / YY" maxlength="5"></li>
+                    <li><input id="card_cvc" inputmode="numeric" placeholder="CVC" maxlength="3"></li>
+                </ul>
+           </div>
+        </section>
+        <section id="card_name">
+            <p>Card name</p>
+            <input type="text">
+        </section>
+        <section id="country">
+            <p>Country or region</p>
+            <select id="country_name" name="country" id="1">
+                <option value="1">UA</option>
+                <option value="2">USA</option>
+                <option value="3">UK</option>
+            </select>
+            <input id="zip_code" type="text" placeholder="ZIP">
+        </section>
+        <section id="pay_button">
+            <a href="../payment_result_form/payment_result.html">
+                <button class="button active_button">
+                    Pay 42.00$
+                </button>
+            </a>
+        </section>
+    </main>
+</body>
+</html>
