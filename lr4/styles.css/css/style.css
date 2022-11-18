@@ -1,0 +1,244 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+main #leading #thin_text {
+  letter-spacing: 4px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #5B5F71;
+}
+
+body {
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+@media only screen and (min-width: 601px) {
+  header #hamburger {
+    display: none;
+  }
+  header #hamburger img {
+    display: inherit;
+  }
+  header nav {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav a {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #242942;
+  }
+  header nav #login, header nav #dot {
+    color: #A0A1AC;
+  }
+  header nav p {
+    display: inline-block;
+    margin-left: 40px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+  header #hamburder {
+    display: inline-block;
+  }
+}
+
+main {
+  width: 60%;
+  position: relative;
+  z-index: 1;
+}
+main #leading {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 60px;
+}
+main #leading p {
+  display: inline-block;
+  margin-right: 16px;
+}
+main #leading #outlined {
+  padding: 8px;
+  border-radius: 15px;
+  background-color: #242942;
+  letter-spacing: 0px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+main #leading #thin_text {
+  left: 80px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+main #text {
+  margin-bottom: 60px;
+}
+main #text #title {
+  margin-bottom: 30px;
+}
+main #text #title p {
+  line-height: 50px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: #242942;
+}
+main #text #subtitle p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #5B5F71;
+}
+@media only screen and (min-width: 601px) {
+  main #buttons p {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  main #buttons {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main #buttons #secondary_button {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    letter-spacing: 4px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #5B5F71;
+  }
+}
+@media only screen and (max-width: 600px) {
+  main #buttons p {
+    display: block;
+  }
+  main #buttons {
+    position: relative;
+  }
+  main #buttons #secondary_button {
+    letter-spacing: 4px;
+    padding: 18px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #5B5F71;
+  }
+}
+main #buttons #main_button {
+  padding: 18px;
+  border-radius: 15px;
+  background-color: #FF5C5C;
+  letter-spacing: 2px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+#devices {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 100%;
+  max-height: 100vh;
+}

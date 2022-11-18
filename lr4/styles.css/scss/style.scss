@@ -1,0 +1,184 @@
+@import "nulling.scss";
+
+$red: #FF5C5C;
+$verydarkblue: #242942;
+$darkgrayishblue: #5B5F71;
+$grayishblue:  #A0A1AC;
+$lightgrayishblue: #EEF3F6;
+
+@mixin extra_font($size, $weight, $color) {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin regular_font($size, $weight, $color) {
+    font-family: 'Barlow', sans-serif;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+%letter_spaced{
+    letter-spacing: 4px;
+    @include regular_font(14px, 400, $darkgrayishblue);
+}
+
+body{
+    height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 100px;
+
+    @media only screen and (min-width: 601px) {
+        #hamburger{
+            display: none;
+            
+            img{
+                display: inherit;
+            }
+        }
+
+        nav{
+            position: relative;
+            display: flex;
+    
+            a{
+                @include extra_font(16px, 700, $verydarkblue);
+            }
+    
+            #login, #dot{
+                color: $grayishblue;
+            }
+    
+            p{
+                display: inline-block;
+                margin-left: 40px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        nav{
+            display: none;
+        }
+
+        #hamburder{
+            display: inline-block;
+        }
+    }
+}
+
+main{
+    width: 60%;
+    position: relative;
+    z-index: 1;
+    #leading{
+        position: relative;
+        display: flex;
+        margin-bottom: 60px;
+
+        p{
+            display: inline-block;
+            margin-right: 16px;
+        }
+
+        #outlined{
+            padding: 8px;
+            border-radius: 15px;
+            background-color: $verydarkblue;
+            letter-spacing: 0px;
+            @include regular_font(14px, 700, white);
+        }
+
+        #thin_text{
+            left: 80px;  
+            position: absolute;               
+            top: 50%;                   
+            transform: translate(0, -50%);
+            @extend %letter_spaced;
+        }
+    }
+
+    #text{
+        margin-bottom: 60px;
+
+        #title{
+            margin-bottom: 30px; 
+            p{
+                line-height: 50px;
+                @include extra_font(50px, 700, $verydarkblue);
+            }
+        }
+
+        #subtitle{
+            p{
+                @include regular_font(16px, 500, $darkgrayishblue);
+            }
+        }
+    }
+
+    #buttons{
+        @media only screen and (min-width: 601px) {
+            p{
+                display: inline-block;
+                margin-right: 30px;
+            }
+
+            &{
+                position: relative;
+                display: flex;
+            }
+
+            #secondary_button{
+                position: absolute;               
+                top: 50%;                   
+                transform: translate(0, -50%);
+                letter-spacing: 4px;
+                @include regular_font(14px, 400, $darkgrayishblue);
+            }
+        }
+    
+        @media only screen and (max-width: 600px) {
+            p{
+                display: block;
+            }
+
+            &{
+                position: relative;
+            }
+
+            #secondary_button{                 
+                letter-spacing: 4px;
+                padding: 18px;
+                @include regular_font(14px, 400, $darkgrayishblue);
+            }
+        }
+
+        #main_button{
+            padding: 18px;
+            border-radius: 15px;
+            background-color: $red;
+            letter-spacing: 2px;
+            @include extra_font(14px, 700, white);
+        }
+    }
+}
+
+#devices{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 100%;
+    max-height: 100vh;
+   
+}
