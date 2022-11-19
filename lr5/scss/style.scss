@@ -1,0 +1,279 @@
+@import "nulling.scss";
+
+%flexeble{
+    position: relative;
+    display: flex;
+}
+
+@mixin font($size, $weight, $color) {
+    font-family: 'Poppins', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+body{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#desktop_nav{
+    display: inline-block;
+    background-color: #F6F6F6;
+    max-width: 90px;
+    max-height: inherit;
+
+    .sidebar_element{
+        color: #A6A6A6;
+        display: block;
+        height: 32px;
+        margin: 61px 0;
+        padding: 0 31px;
+        position: relative;
+
+        svg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-height: 32px;
+            max-width: 30px;
+        }
+
+        &:hover{
+            transition: 0.3s;
+            color: #FF4E4E;
+            border-right: #FF4E4E solid 3px;
+        }
+    }
+}
+
+#mobile_nav{
+    @extend %flexeble;
+    justify-content: space-between;
+    width: 100%;
+    display: none;
+    color: #A6A6A6;
+
+    svg{
+        height: 50px;
+    }
+}
+
+main{
+    section{
+        margin-top: 40px;
+    }
+
+    #search{
+        @extend %flexeble;
+        @include font(16px, 400, #A6A6A6);
+        padding: 13px 23px;
+        width: inherit;
+        border-radius: 10px;
+        background-color: #F6F6F6;
+
+        svg{
+            margin-right: 19px;
+        }
+    }
+
+    #categories{
+        #desktop_title{
+            @include font(26px, 700, #353535);
+        }
+
+        #mobile_title{
+            @include font(46px, 700, #353535);
+            display: none
+        }
+        
+        #subtitle{
+            @include font(16px, 600, #A6A6A6);
+        }
+
+        #desktop_tabs{
+            @extend %flexeble;
+            margin-top: 26px;
+
+            .desktop_tab{
+                @extend %flexeble;
+                margin-right: 117px;
+                color: #353535;
+                padding-bottom: 9px;
+                @include font(18px, 600, #353535);
+
+                &:hover{
+                    transition: 0.3s;
+                    color: #FF4E4E;
+                    border-bottom: #FF4E4E solid 3px;
+                }
+
+                svg{
+                    margin-right: 15px;
+                }
+
+            }
+        }
+
+        #mobile_tabs{
+            @extend %flexeble;
+            justify-content: space-between;
+            width: inherit;
+            margin-top: 26px;
+
+            .mobile_tab{
+                position: relative;
+                background-color: #E8E8E8;
+                width: 86px;
+                height: 86px;
+                color: #353535;
+                border-radius: 16px;
+
+                &:hover{
+                    transition: 0.3s;
+                    color: white;
+                    background-color: #FF4E4E;
+                }
+
+                svg{
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    left: 50%;
+                }
+
+            }
+        }
+    }
+    #pizzas_grid{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2vw;
+
+        .pizza_element{
+            width: 260px;
+            height: 260px;
+            box-shadow: 4px 4px 12px #0000001A;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+
+            img{
+                width: inherit;
+                width: 163px;
+            }
+
+            .pizza_info{
+                padding: 13px;
+
+                .pizza_name{
+                    @include font(16px, 500, #616161);
+                }
+
+                .pizza_price{
+                    @extend %flexeble;
+                    @include font(16px, 600, #FF4E4E);
+                    position: relative;
+
+                    .second_part{
+                        font-size: 10px;
+                        vertical-align: bottom;
+                    }
+                }
+            }
+            .order_button{
+                height: 40px;
+                width: 40px;
+                position: absolute;
+                border-radius: 13px;
+                border: #353535 solid 1px;
+                color: #353535;
+                bottom: 11px;
+                right: 11px;
+
+                &:hover{
+                    transition: 0.3s;
+                    background-color: #353535;
+                    color: white;
+                }
+
+                div{
+                    width: inherit;
+                    height: inherit;
+                    position: relative;
+
+                    svg{
+                        position: absolute;
+                        transform: translate(-50%, -50%);
+                        top: 50%;
+                        left: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#order{
+    max-width: 440px;
+    max-height: inherit;
+    background-color: #F6F6F6;
+    padding: 33px 24px;
+
+    #order_title{
+        @include font(26px, 700, #353535);
+        margin-bottom: 25px;
+    }
+
+    #order_checkout{
+        @extend %flexeble;
+        justify-content: space-between;
+
+        #checkout_title{
+            @include font(20px, 600, #353535);
+        }
+
+        #checkout_subtitle{
+            @include font(16px, 500, #6B6B6B);
+        }
+    }
+
+    #warning_advice{
+        max-width: 392px;
+        padding: 13px 24px;
+        background-color: #F3E5B480;
+        @include font(12px, 400, #DFAF00);
+        position: relative;
+        display: flex;
+        border-radius: 12px;
+
+        svg{
+            width: 50px;
+            margin-right: 8px;
+        }
+    }
+
+    .info{
+        margin-top: 30px;
+
+        .title{
+            @include font(18px, 600, #353535);
+        }
+
+        .subtitle{
+            @include font(16px, 500, #ACACAC);
+        }
+    }
+
+    #mobile_order_button{
+        padding: 17px 101px;
+        background-color: #5C5C5C;
+        border-radius: 50px; 
+        @include font(18px, 600, white);
+        text-align: center;
+        margin-top: 277px;
+    }
+}

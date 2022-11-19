@@ -1,0 +1,396 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+#order #order_checkout, main #pizzas_grid .pizza_element .pizza_info .pizza_price, main #categories #mobile_tabs, main #categories #desktop_tabs .desktop_tab, main #categories #desktop_tabs, main #search, #mobile_nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#desktop_nav {
+  display: inline-block;
+  background-color: #F6F6F6;
+  max-width: 90px;
+  max-height: inherit;
+}
+#desktop_nav .sidebar_element {
+  color: #A6A6A6;
+  display: block;
+  height: 32px;
+  margin: 61px 0;
+  padding: 0 31px;
+  position: relative;
+}
+#desktop_nav .sidebar_element svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-height: 32px;
+  max-width: 30px;
+}
+#desktop_nav .sidebar_element:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #FF4E4E;
+  border-right: #FF4E4E solid 3px;
+}
+
+#mobile_nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  display: none;
+  color: #A6A6A6;
+}
+#mobile_nav svg {
+  height: 50px;
+}
+
+main section {
+  margin-top: 40px;
+}
+main #search {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #A6A6A6;
+  padding: 13px 23px;
+  width: inherit;
+  border-radius: 10px;
+  background-color: #F6F6F6;
+}
+main #search svg {
+  margin-right: 19px;
+}
+main #categories #desktop_title {
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #353535;
+}
+main #categories #mobile_title {
+  font-family: "Poppins", sans-serif;
+  font-size: 46px;
+  font-weight: 700;
+  color: #353535;
+  display: none;
+}
+main #categories #subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #A6A6A6;
+}
+main #categories #desktop_tabs {
+  margin-top: 26px;
+}
+main #categories #desktop_tabs .desktop_tab {
+  margin-right: 117px;
+  color: #353535;
+  padding-bottom: 9px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #353535;
+}
+main #categories #desktop_tabs .desktop_tab:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #FF4E4E;
+  border-bottom: #FF4E4E solid 3px;
+}
+main #categories #desktop_tabs .desktop_tab svg {
+  margin-right: 15px;
+}
+main #categories #mobile_tabs {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: inherit;
+  margin-top: 26px;
+}
+main #categories #mobile_tabs .mobile_tab {
+  position: relative;
+  background-color: #E8E8E8;
+  width: 86px;
+  height: 86px;
+  color: #353535;
+  border-radius: 16px;
+}
+main #categories #mobile_tabs .mobile_tab:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+  background-color: #FF4E4E;
+}
+main #categories #mobile_tabs .mobile_tab svg {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+main #pizzas_grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 2vw 1fr 2vw 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 2vw 1fr 2vw 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2vw;
+}
+main #pizzas_grid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+main #pizzas_grid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+main #pizzas_grid > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+main #pizzas_grid > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+main #pizzas_grid > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+main #pizzas_grid > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+main #pizzas_grid > *:nth-child(7) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+main #pizzas_grid > *:nth-child(8) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+main #pizzas_grid > *:nth-child(9) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+}
+main #pizzas_grid .pizza_element {
+  width: 260px;
+  height: 260px;
+  -webkit-box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1019607843);
+          box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+main #pizzas_grid .pizza_element img {
+  width: inherit;
+  width: 163px;
+}
+main #pizzas_grid .pizza_element .pizza_info {
+  padding: 13px;
+}
+main #pizzas_grid .pizza_element .pizza_info .pizza_name {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #616161;
+}
+main #pizzas_grid .pizza_element .pizza_info .pizza_price {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FF4E4E;
+  position: relative;
+}
+main #pizzas_grid .pizza_element .pizza_info .pizza_price .second_part {
+  font-size: 10px;
+  vertical-align: bottom;
+}
+main #pizzas_grid .pizza_element .order_button {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  border-radius: 13px;
+  border: #353535 solid 1px;
+  color: #353535;
+  bottom: 11px;
+  right: 11px;
+}
+main #pizzas_grid .pizza_element .order_button:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #353535;
+  color: white;
+}
+main #pizzas_grid .pizza_element .order_button div {
+  width: inherit;
+  height: inherit;
+  position: relative;
+}
+main #pizzas_grid .pizza_element .order_button div svg {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+#order {
+  max-width: 440px;
+  max-height: inherit;
+  background-color: #F6F6F6;
+  padding: 33px 24px;
+}
+#order #order_title {
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #353535;
+  margin-bottom: 25px;
+}
+#order #order_checkout {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+#order #order_checkout #checkout_title {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #353535;
+}
+#order #order_checkout #checkout_subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #6B6B6B;
+}
+#order #warning_advice {
+  max-width: 392px;
+  padding: 13px 24px;
+  background-color: rgba(243, 229, 180, 0.5019607843);
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #DFAF00;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 12px;
+}
+#order #warning_advice svg {
+  width: 50px;
+  margin-right: 8px;
+}
+#order .info {
+  margin-top: 30px;
+}
+#order .info .title {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #353535;
+}
+#order .info .subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ACACAC;
+}
+#order #mobile_order_button {
+  padding: 17px 101px;
+  background-color: #5C5C5C;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-top: 277px;
+}
