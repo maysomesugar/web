@@ -1,3 +1,2 @@
 # web
-repository for web-project for university.
-
+repository for university web-projects.
